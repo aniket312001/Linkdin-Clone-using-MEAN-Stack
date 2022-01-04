@@ -1,0 +1,38 @@
+<form [formGroup]="formValue" (ngSubmit)="onSubmit()">
+
+    <div class="formControl">
+        <label for="nm">position</label><br>
+        <input type="text" name="position" id="nm" formControlName="position">
+    </div>
+
+    <div class="formControl">
+        <label for="com">company</label><br>
+        <input type="text" name="company" id="com" formControlName="company">
+    </div>
+    
+    <div class="formControl">
+        <label for="addr">address</label><br>
+        <input type="text" name="add" id="addr" formControlName="address">
+    </div>
+    
+    <div class="formControl">
+        <label for="jt">job_type</label><br>
+        <input type="text" name="type" id="jt" formControlName="job_type">
+    </div>
+    
+    <div class="formControl">
+        <label for="total_workers">total_workers</label><br>
+        <input type="number" name="total_workers" id="total_workers" formControlName="total_workers">
+    </div>
+
+    <div class="formControl">
+        <label for="pid">post_by_id</label><br>
+        <input [attr.disabled]=true type="text" name="post_by_id" id="pd" formControlName="post_by_id" >
+    </div>
+    
+    <div class="formControl sub">
+        <button *ngIf="!job_id" type="submit" [disabled]="!formValue.valid">Post</button>
+        <button *ngIf="job_id" type="submit" [disabled]="!formValue.valid">Update</button>
+    </div>
+
+</form>

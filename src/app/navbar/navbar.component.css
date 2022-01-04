@@ -1,0 +1,16 @@
+ul{
+    display: flex;
+    background-color: black;
+
+}
+
+li{
+    list-style: none;
+    padding: 10px 10px;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}

@@ -1,0 +1,32 @@
+<form [formGroup]="formValue" (ngSubmit)="onSubmit()">
+
+    <div class="formControl">
+        <label for="nm">Name</label><br>
+        <input type="text" name="name" id="nm" formControlName="name">
+    </div>
+    <div class="formControl">
+        <label for="age">Age</label><br>
+        <input type="num" name="age" id="age" formControlName="age">
+    </div>
+    <div class="formControl">
+        <label for="ed">Education</label><br>
+        <input type="text" name="edu" id="ed" formControlName="education">
+    </div>
+    <div class="formControl">
+        <label for="ph">Phone</label><br>
+        <input type="text" name="phone" id="ph" formControlName="phone">
+    </div>
+    <div class="formControl">
+        <label for="em">Email</label><br>
+        <input type="email" name="email" id="em" formControlName="email">
+    </div>
+    <div class="formControl">
+        <label for="pass">Password</label><br>
+        <input type="password" name="pass" id="pass" formControlName="password">
+    </div>
+
+    <div class="formControl sub">
+        <button type="submit" [disabled]="!formValue.valid">Register</button>
+    </div>
+
+</form>

@@ -1,0 +1,33 @@
+<div class="container" *ngIf="myData"> 
+
+    <div>
+        <h1 style="color: blue;">{{myData.position}}</h1>
+    </div>
+<br>
+    <div>
+       <h4>Company Name -  <span style="color: red;">{{myData.company}}</span> </h4>
+    </div>
+
+    <div>
+        <h4>location - <span style="color: red;">{{myData.address}}</span> </h4>
+    </div>
+
+    <div>
+        <h4>Job Type - <span style="color: red;">{{myData.job_type}}</span> </h4>
+    </div>
+
+    <div>
+        <h4>Employee - <span style="color: red;">{{myData.total_workers}}</span> </h4>
+    </div>
+
+    <div *ngIf="userData">
+        <h4>Posted by - <span style="color: green;">{{userData.name}}</span> </h4>
+    </div>
+    <div *ngIf="userData">
+        <h4>email - <span style="color: green;">{{userData.email}}</span> </h4>
+    </div>
+  
+    <div class="mt-5">
+        <button class="btn btn-success">Apply Now</button>
+    </div>
+</div>

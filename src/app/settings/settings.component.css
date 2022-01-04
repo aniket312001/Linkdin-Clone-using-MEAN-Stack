@@ -1,0 +1,30 @@
+form{
+    
+    background-color: rgb(233, 243, 199);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formControl{
+    margin: 10px;
+}
+
+.sub{
+    margin-top:5px ;
+}
+
+input{
+    border-radius: 5px;
+    width: 500px;
+    height: 30px;
+    padding-left: 15px;
+    font-size: large;
+}
+
+button[type=submit]{
+    margin: 5px;
+   background-color: rgb(227, 227, 238);
+    cursor: pointer;
+}

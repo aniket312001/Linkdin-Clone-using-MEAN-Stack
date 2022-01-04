@@ -1,0 +1,26 @@
+
+<div *ngIf="allData;else elseblock">
+
+  <div class="list-group col-10 " >
+    <div *ngFor="let data of allData.slice().reverse() " class="mb-5"> 
+
+        <a [routerLink]="['/job','single',data._id]" class="list-group-item list-group-item-action " aria-current="true" >
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{data.position}}</h5>
+                <small>{{data.date|date}}</small>
+            </div>
+            <p class="mb-1">{{data.company}}</p>
+            <small>{{data.address}}</small>
+            
+        </a>&nbsp;
+        <button class="btn btn-info" (click)="onUpdate(data._id)">Update</button>&nbsp;
+        <button class="btn btn-danger" (click)="onDelete(data._id)">Delete</button>
+    </div>
+    
+  </div>
+
+</div>
+
+<ng-template #elseblock>
+    <h1>No Data Posted Till now..</h1>
+</ng-template>

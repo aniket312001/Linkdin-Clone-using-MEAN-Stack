@@ -1,0 +1,9 @@
+<ul>
+    <li><a >Home</a></li> 
+    <li *ngIf="!userService.VALID_USER"><a routerLink="/login">Login</a></li> 
+    <li *ngIf="!userService.VALID_USER" ><a routerLink="/register">Register</a></li>   
+    <li *ngIf="userService.VALID_USER" ><a routerLink="/job">Find-Job</a></li>   
+    <li *ngIf="userService.VALID_USER" ><a routerLink="/job/create">Post-Job</a></li>   
+    <li *ngIf="userService.VALID_USER" ><a routerLink="/job/mypost">MyPost</a></li>   
+    <li *ngIf="userService.VALID_USER" ><a routerLink="/setting">MyProfile</a></li>   
+</ul>

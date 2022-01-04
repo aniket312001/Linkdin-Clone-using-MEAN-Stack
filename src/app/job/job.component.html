@@ -1,0 +1,35 @@
+<!-- <form action="" class="col-10" [formGroup]="formValue" (ngSubmit)="onSubmit()">
+  
+  <input type="text" name="" id="" placeholder="Position" formControlName="position">
+  <input type="text" name="" id="" placeholder="Company" formControlName="company">
+  <input type="text" name="" id="" placeholder="Address" formControlName="address">
+  <button>Search</button>
+
+</form> -->
+
+<form  class="col-10">
+  <input type="text" name="position" id="" [(ngModel)]="position" placeholder="Position">
+  <input type="text" name="company" id="" [(ngModel)]="company"  placeholder="Company" >
+  <input type="text" name="address" id="" [(ngModel)]="address"  placeholder="Address">
+  
+</form>
+
+<div *ngIf="allData">
+
+  
+  
+
+  <div class="list-group col-10 ">
+    <ng-container  *ngFor="let data of allData.slice().reverse() ">
+      <a [routerLink]="['/job','single',data._id]" class="list-group-item list-group-item-action " aria-current="true" *ngIf="confirm(data)" >
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{data.position}}</h5>
+          <small>{{data.date|date}}</small>
+        </div>
+        <p class="mb-1">{{data.company}}</p>
+        <small>{{data.address}}</small>
+      </a>
+    </ng-container>
+  </div>
+
+</div>
