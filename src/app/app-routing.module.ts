@@ -9,6 +9,7 @@ const routes: Routes = [
   {path:"register",component:RegisterComponent},
   {path:"setting",component:SettingsComponent},
   { path: 'job', loadChildren: () => import('./job/job.module').then(m => m.JobModule) },
+  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
 ];
 
 @NgModule({

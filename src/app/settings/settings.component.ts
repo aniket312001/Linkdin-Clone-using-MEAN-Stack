@@ -24,6 +24,8 @@ export class SettingsComponent implements OnInit {
         name: new FormControl(this.arr.name,[Validators.required]),
         age: new FormControl(this.arr.age,Validators.compose([Validators.required])),
         education: new FormControl(this.arr.education,[Validators.required]),
+        location: new FormControl(this.arr.location,[Validators.required]),
+        skills: new FormControl(this.arr.skills,[Validators.required]),
         phone: new FormControl(this.arr.phone,[Validators.required]),
         email: new FormControl(this.arr.email,[Validators.required,Validators.email]),
         password: new FormControl(this.arr.password,[Validators.required]),

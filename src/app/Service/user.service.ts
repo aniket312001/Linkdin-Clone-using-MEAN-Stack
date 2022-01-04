@@ -42,4 +42,10 @@ export class UserService {
   }
 
 
+  getAllUser():Observable<any>{
+    let url = "http://localhost:3000/api/"
+    return this.http.get<any>(url)
+  }
+
+
 }

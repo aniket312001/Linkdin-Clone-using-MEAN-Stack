@@ -1,5 +1,5 @@
 
-<div *ngIf="allData;else elseblock">
+<div *ngIf="allData; else block">
 
   <div class="list-group col-10 " >
     <div *ngFor="let data of allData.slice().reverse() " class="mb-5"> 
@@ -21,6 +21,7 @@
 
 </div>
 
-<ng-template #elseblock>
-    <h1>No Data Posted Till now..</h1>
+<ng-template #block >
+    <h1 style="padding: 45px;">No Data Posted Till now..</h1>
+ 
 </ng-template>

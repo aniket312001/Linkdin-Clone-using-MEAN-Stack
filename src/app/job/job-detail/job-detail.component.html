@@ -21,7 +21,7 @@
     </div>
 
     <div *ngIf="userData">
-        <h4>Posted by - <span style="color: green;">{{userData.name}}</span> </h4>
+        <h4>Posted by - <span style="color: green;"><a [routerLink]="['/user','single',userData._id]" >  {{userData.name}} </a></span> </h4>
     </div>
     <div *ngIf="userData">
         <h4>email - <span style="color: green;">{{userData.email}}</span> </h4>

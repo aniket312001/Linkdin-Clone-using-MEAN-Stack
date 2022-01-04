@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { JobService } from 'src/app/Service/job.service';
 
+
 @Component({
   selector: 'app-my-job',
   templateUrl: './my-job.component.html',
@@ -9,7 +10,7 @@ import { JobService } from 'src/app/Service/job.service';
 })
 export class MyJobComponent implements OnInit {
 
-  allData : any
+  allData : any 
   constructor(private jobService:JobService,private route:Router) { }
 
 
@@ -17,6 +18,7 @@ export class MyJobComponent implements OnInit {
 
     this.show()
 
+    
   }
 
   show(){
@@ -25,6 +27,10 @@ export class MyJobComponent implements OnInit {
     }
     this.jobService.getFilterJob(obj).subscribe(data =>{
       this.allData = data
+      if(this.allData.length == 0 ){
+        this.allData = false
+      }     
+      
     })
   }
 

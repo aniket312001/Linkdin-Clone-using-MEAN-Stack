@@ -1,0 +1,23 @@
+<form  class="col-10">
+  <input type="text" id="" name="name" [(ngModel)]="name" placeholder="Name">
+  <input type="text" id="" name="skill"  [(ngModel)]="skill"  placeholder="Skills" >
+  <input type="text" id="" name="location" [(ngModel)]="location"  placeholder="Location">
+</form>
+
+
+  <div *ngIf="allData">
+  
+    <div class="list-group col-10 ">
+      <ng-container  *ngFor="let data of allData.slice().reverse() ">
+        <a [routerLink]="['/user','single',data._id]" class="list-group-item list-group-item-action " aria-current="true" *ngIf="confirm(data)" >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{data.name}}</h5>
+            <!-- <small>{{data.date|date}}</small> -->
+          </div>
+          <p class="mb-1">{{data.skills}}</p>
+          <small>{{data.location}}</small>
+        </a>
+      </ng-container>
+    </div>
+  
+  </div>
